@@ -28,7 +28,7 @@ class App extends React.Component {
       .then(this.initialize)
   }
   initialize(words) {
-    this.dictionary = words.split('\r\n').reduce((prev, cur) => {
+    this.dictionary = words.split('\n').reduce((prev, cur) => {
       const chars = cur.toLowerCase().split('')
       const charSet = new Set(chars)
       const key = [...charSet].sort().join('')
