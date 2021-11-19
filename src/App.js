@@ -17,6 +17,7 @@ class App extends React.Component {
 
     this.initialize = this.initialize.bind(this)
     this.inputChanged = this.inputChanged.bind(this)
+    this.onKeyPress = this.onKeyPress.bind(this)
     this.modalClosed = this.modalClosed.bind(this)
     this.solve = this.solve.bind(this)
   }
@@ -46,6 +47,15 @@ class App extends React.Component {
     const chars = value.split('')
     const input = chars.filter((c) => /^[A-Z]$/i.test(c)).join('')
     this.setState({ input })
+  }
+  onKeyPress(event) {
+    if (
+      (event.key === 'Enter' || event.keyCode === 13) &&
+      this.state.input &&
+      this.state.input.length === 7
+    ) {
+      this.solve()
+    }
   }
   modalClosed() {
     this.setState({ solution: undefined })
@@ -100,9 +110,11 @@ class App extends React.Component {
                   <FormControl
                     placeholder="Spelling Bee letters"
                     onChange={this.inputChanged}
+                    onKeyPress={this.onKeyPress}
                     maxLength={7}
                     className="shadow-none"
                     value={this.state.input}
+                    disabled={!!this.state.solving}
                     autoFocus
                   />
                   <InputGroup.Text>
