@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/spelling-bee-solver/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/spelling-bee-solver/static/js/main.112f99e1.chunk.js",
-    "main.js.map": "/spelling-bee-solver/static/js/main.112f99e1.chunk.js.map",
+    "main.js": "/spelling-bee-solver/static/js/main.8daaa0b4.chunk.js",
+    "main.js.map": "/spelling-bee-solver/static/js/main.8daaa0b4.chunk.js.map",
     "runtime-main.js": "/spelling-bee-solver/static/js/runtime-main.8b7805d7.js",
     "runtime-main.js.map": "/spelling-bee-solver/static/js/runtime-main.8b7805d7.js.map",
     "static/css/2.383c0125.chunk.css": "/spelling-bee-solver/static/css/2.383c0125.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.90508b76.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.112f99e1.chunk.js"
+    "static/js/main.8daaa0b4.chunk.js"
   ]
 }
