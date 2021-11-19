@@ -22,7 +22,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     fetch(
-      'https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt'
+      'https://raw.githubusercontent.com/jrnorth/spelling-bee-solver/master/dictionary.txt'
     )
       .then((res) => res.text())
       .then(this.initialize)
@@ -71,9 +71,7 @@ class App extends React.Component {
         return prev
       }, [])
       .sort()
-    //setTimeout(() => {
     this.setState({ solution, solving: false })
-    //}, 2000)
   }
   solutionRows() {
     const rows = []
